@@ -16,13 +16,13 @@ one single independent file you can import it into your project
 #### Usage
 check the demo.py and follow the steps below
 
-###### importing 
+##### importing 
 
 ```python
 from phonmail import extractor # import the main class (extractor)
 ```
 
-###### extraction 
+##### extraction 
 there is two main methods in the extarctor opject "emails" and "phones"
 
 ```python
@@ -42,3 +42,31 @@ print(ex.emails()) # this method for emails
 print("---------------------------------------phones------------------------------------")
 print(ex.phones())
 ```
+##### methods and parameters
+
+**emails** : return all the emails.
+
+parameter | description | example
+------------ | ------------- | ------------- 
+provider | return only specific provider | ex.emails(provider = "gmail")
+output | return output as string or list by default is string | ex.emails(output = "list")
+
+
+**phones** : return all the phone numbers.
+
+parameter | description | example
+------------ | ------------- | ------------- 
+country_code | return only specific country | ex.phones(country_code = "966")
+output | return output as string or list by default is string | ex.phones(output = "list")
+
+**email_counter** : return number of emails.
+
+parameter | description | example
+------------ | ------------- | ------------- 
+provider | return the emails number  of specific provider | ex.email_counter(provider = "gmail")
+
+**phone_counter** : return number of phones.
+
+parameter | description | example
+------------ | ------------- | ------------- 
+country_code | return the emails number  of specific provider | ex.phone_counter(country_code = "1")
